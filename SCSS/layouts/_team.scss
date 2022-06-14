@@ -2,11 +2,30 @@
         /* Team */
 
 .section-team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: 480px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
+    
     background-color: var(--primary-team-bg-color);
 
     &__title {
+        @media screen and (min-width: 480px) {
+            margin-bottom: 30px;
+            color: var(--title-text-color);
+                
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.17;
+            text-align: center;
+            }
+        
+        @media screen and (min-width: 1200px) {
             margin-bottom: 50px;
             color: var(--title-text-color);
     
@@ -15,16 +34,60 @@
             line-height: 1.17;
             text-align: center;
         }
+    }
 }
 
 .team {
-    display: flex;
-
-    &__mamber:not(:last-child) {
-            margin-right: 30px;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+            display: inline-block;
         }
     
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.team {
+    
+    &__mamber:not(:last-child) {
+            @media screen and (min-width: 480px) and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+
+    &__mamber:nth-child(2n+1) {
+        @media screen and (min-width: 768px) {
+            margin-right: 30px;
+        }
+    }
+
+    &__mamber:nth-child(-n+2) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__mamber:not(:last-child) {
+        @media screen and (min-width: 1200px) {
+            margin-right: 30px;
+        }
+    }
+    
     &__mamber {
+
+        @media screen and (min-width: 480px) {
+                width: 450px;
+       }
+    
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+    
             background-color: var(--primary-white-color);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
             border-radius: 0px 0px 4px 4px;
@@ -42,6 +105,8 @@
     
     &__text {
             margin-bottom: 16px;
+
+            font-weight: 400;
             font-size: 16px;
             line-height: 1.19;
             text-align: center;
