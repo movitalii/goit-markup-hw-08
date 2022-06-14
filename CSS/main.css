@@ -924,8 +924,11 @@ textarea {
 }
 
 /* Work */
-.section-work {
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .section-work {
+    display: none;
+    padding-bottom: 94px;
+  }
 }
 
 .section-work__title {
