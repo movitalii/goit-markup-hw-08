@@ -826,14 +826,56 @@ textarea {
   }
 }
 
-.rules {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .rules {
+    display: inline-block;
+  }
 }
 
-.rules__item {
-  width: 270px;
+@media screen and (min-width: 768px) {
+  .rules {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rules__item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rules__item {
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .rules__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rules__item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .rules__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rules__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .rules__item::before {
@@ -863,10 +905,6 @@ textarea {
   background-image: url(../images/icons/astronaut.svg);
 }
 
-.rules__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .rules__title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -880,6 +918,7 @@ textarea {
 .rules__text {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
