@@ -2,10 +2,28 @@
             /* Clients */
 
 .section-clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: 480px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    
+    @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+    }
 
     &__title {
+        @media screen and (min-width: 480px) {
+            margin-bottom: 30px;
+            color: var(--title-text-color);
+    
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.17;
+            text-align: center;
+        }
+    
+        @media screen and (min-width: 1200px) {
             margin-bottom: 50px;
             color: var(--title-text-color);
     
@@ -14,17 +32,70 @@
             line-height: 1.17;
             text-align: center;
         }
+    }
+        
+}
+
+.clients {   
+        @media screen and (min-width: 480px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
 }
 
 .clients {
-    display: flex;
 
+    &__link {
+        @include mq('mobile') {
+            width: 210px;
+        }
+
+        @include mq('tablet') {
+            width: 226px;
+        }
+
+        @include mq('desktop') {
+            width: 170px;
+        }
+    }
+
+    &__item:nth-child(2n+1) {
+        @include mq(mobile-only) {
+        margin-right: 30px;
+        }
+    }
+
+    &__item:nth-child(-n+4) {
+        @include mq(mobile-only) {
+            margin-bottom: 30px;
+        }
+    }
+
+        &__item:not(:nth-child(3n)) {
+            @include mq(tablet-only) {
+                margin-right: 30px;
+            }
+        }
+
+    
+    &__item:nth-child(-n+3) {
+        @include mq(tablet-only) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @include mq(desktop) {
+            margin-right: 30px;
+        }
+    }
+    
+    
     &__link {
             display: flex;
             align-items: center;
             justify-content: center;
     
-            width: 170px;
             height: 92px;
     
             border: 1px solid var(--socials-link-color);
@@ -47,9 +118,5 @@
             fill: var(--socials-link-color);
     
             transition: fill var(--timing-function);
-        }
-    
-    &__item:not(:last-child) {
-            margin-right: 30px;
         }
 }
