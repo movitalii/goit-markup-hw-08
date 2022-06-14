@@ -162,6 +162,7 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -686,9 +687,46 @@ textarea {
   cursor: pointer;
 }
 
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: #fff;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu__contatcts {
+  margin-top: auto;
+}
+
 /* Header */
 .page-header {
   border-bottom: 1px solid var(--border-footer);
+}
+
+@media screen and (max-width: 767.98px) {
+  .page-header {
+    display: none;
+  }
 }
 
 .main-nav {
@@ -712,6 +750,17 @@ textarea {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .main-nav__logo {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
 .main-nav__text {
   color: var(--title-text-color);
   font-family: Raleway, sans-serif;
@@ -719,6 +768,14 @@ textarea {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .main-nav__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .site-nav {
@@ -766,37 +823,71 @@ textarea {
   color: var(--accent-color);
 }
 
-.contacts {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts {
+    margin-left: auto;
+    display: block;
+    text-align: left;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .contacts {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__item:first-child {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   text-decoration: none;
   -webkit-transition: color var(--timing-function);
   transition: color var(--timing-function);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 .contacts__link:hover, .contacts__link:focus {
@@ -806,6 +897,26 @@ textarea {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__icon {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__icon--envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 /* Hero */

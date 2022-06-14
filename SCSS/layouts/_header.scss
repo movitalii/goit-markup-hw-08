@@ -5,11 +5,27 @@
     border-bottom: 1px solid var(--border-footer);
 }
 
+.page-header {
+    @include mq(mobile-only) {
+        display: none;
+    }
+}
+
 .main-nav {
     align-items: center;
     display: flex;
 
     &__logo {
+        @include mq(tablet-only) {
+            margin-right: 88px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.17;
+        }
+
         margin-right: 93px;
         padding-top: 24px;
         padding-bottom: 25px;
@@ -23,6 +39,11 @@
     }
             
     &__text {
+        @include mq(tablet-only) {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.17;
+        }
         color: var(--title-text-color);
         font-family: Raleway, sans-serif;
             
@@ -83,26 +104,56 @@
 }
           
 .contacts {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
+    @include mq(tablet-only) {
+        margin-left: auto;
+        display: block;
+        text-align: left;
+
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @include mq(desktop) {
+        margin-left: auto;
+            display: flex;
+            align-items: center;
+    }
+    
 
     &__item:not(:last-child) {
-        margin-right: 30px;
+        @include mq(desktop) {
+            margin-right: 30px;
+        }
+        
     }
-            
+    
+    &__item:first-child {
+        @include mq(tablet-only) {
+            margin-bottom: 10px;
+        }
+    }
+
     &__link {
+        @include mq(tablet-only) {
+        font-weight: 500;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.02em;
+        }
+
+        @include mq(desktop) {
         padding-top: 32px;
         padding-bottom: 32px;
-            
+        
         display: flex;
         align-items: center;
-            
-        color: var(--primary-text-color);
+
         font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+        }
+           
+        color: var(--primary-text-color);
         text-decoration: none;
             
         transition: color var(--timing-function);
@@ -114,7 +165,26 @@
         }
             
     &__icon {
-            margin-right: 10px;
-            fill: currentColor;
+        @include mq(tablet-only){
+            margin-right: 8px;
         }
+
+        margin-right: 10px;
+        fill: currentColor;
+    }
+
+     
+    &__icon--envelope {
+        @include mq(tablet-only) {
+            width: 14px;
+            height: 10px;
+        }
+    }
+
+    &__icon--phone {
+        @include mq(tablet-only) {
+            width: 10px;
+                height: 14px;
+        }
+    }
 }
