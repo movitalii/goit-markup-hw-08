@@ -48,11 +48,10 @@
             margin-right: 12px;
         }
 
-        @include mq(mobile-only) {
-            max-width: 450px;
-        }
-        
+        width: 450px;
+
         padding: 15px 16px;
+
         @include mq(not-desktop) {
             margin-bottom: 20px;
         }
