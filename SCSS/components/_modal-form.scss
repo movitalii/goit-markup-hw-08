@@ -7,6 +7,7 @@
     left: 0;
     z-index: 100;
 
+    
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -26,6 +27,10 @@
     top: 50%;
     left: 50%;
 
+    @include mq(not-desktop) {
+        width: 100%;
+        max-width: 450px;
+    }
     width: 528px;
     padding: 40px;
 
@@ -66,173 +71,173 @@
     background-color: var(--primary-white-color);
 
     &__icon-close {
-            transition: fill var(--timing-function);
-        }
-    
+        transition: fill var(--timing-function);
+    }
+
     &:hover .modal-btn__icon-close,
     &:focus .modal-btn__icon-close {
-            fill: var(--accent-color);
-        }
+        fill: var(--accent-color);
+    }
 }
 
 .modal-form {
     width: 100%;
 
     &__field {
-            display: block;
-            position: relative;
-            margin-bottom: 10px;
-        }
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+    }
 
     &__input {
-            margin: 0;
-            width: 100%;
-            height: 40px;
-            padding: 11px 12px;
-            padding-left: 42px;
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-    
-            outline: transparent;
-    
-            transition: border-color var(--timing-function);
-        }
-    
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        padding: 11px 12px;
+        padding-left: 42px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        outline: transparent;
+
+        transition: border-color var(--timing-function);
+    }
+
     &__field-icon {
-            position: relative;
-        }
+        position: relative;
+    }
 
     &__icon {
-            position: absolute;
-            top: 50%;
-            left: 12px;
-            transform: translateY(-50%);
-            transition: fill var(--timing-function);
-        }
-    
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: fill var(--timing-function);
+    }
+
     &__input:focus+&__icon {
-            fill: var(--accent-color);
-        }
-    
+        fill: var(--accent-color);
+    }
+
     &__input:focus {
-            border-color: var(--accent-color);
-        }
+        border-color: var(--accent-color);
+    }
 
     &__label {
-            display: block;
-            margin-bottom: 4px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 1.17;
-            letter-spacing: 0.01em;
-    
-            color: var(--primary-text-color)
-        }
-    
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+
+        color: var(--primary-text-color)
+    }
+
     &__textarea {
-            display: block;
-            margin-bottom: 20px;
-        }
-    
+        display: block;
+        margin-bottom: 20px;
+    }
+
     &__comment {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-    
-            outline: transparent;
-    
-            transition: border-color var(--timing-function);
-        }
-    
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        outline: transparent;
+
+        transition: border-color var(--timing-function);
+    }
+
     &__comment:focus {
-            border-color: var(--accent-color);
-        }
-    
+        border-color: var(--accent-color);
+    }
+
     &__comment::placeholder {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 1.17;
-            letter-spacing: 0.01em;
-            color: rgba(117, 117, 117, 0.5);
-        }
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 
     &__policy-group {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
     &__checkbox-description {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 1.71;
-            letter-spacing: 0.03em;
-    
-            color: var(--primary-text-color);
-        }
-    
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+
+        color: var(--primary-text-color);
+    }
+
     &__custom-checkbox {
-            width: 16px;
-            height: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-    
-            margin-right: 7px;
-            border: 2px solid var(--title-text-color);
-            border-radius: 2px;
-    
-            transition: background-color var(--timing-function),
-                border-color var(--timing-function);
-        }
-    
+        width: 16px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 7px;
+        border: 2px solid var(--title-text-color);
+        border-radius: 2px;
+
+        transition: background-color var(--timing-function),
+            border-color var(--timing-function);
+    }
+
     &__custom-checkbox-icon {
-            opacity: 0;
-    
-            transition: opacity var(--timing-function);
-        }
-    
+        opacity: 0;
+
+        transition: opacity var(--timing-function);
+    }
+
     &__checkbox:checked+&__custom-checkbox &__custom-checkbox-icon {
-            opacity: 1;
-        }
-    
+        opacity: 1;
+    }
+
     &__checkbox:checked+&__custom-checkbox {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-    
-        }
-    
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+
+    }
+
     &__checkbox {
-            -webkit-appearence: none;
-            -moz-appearance: none;
-    
-            appearance: none
-        }
-    
+        -webkit-appearence: none;
+        -moz-appearance: none;
+
+        appearance: none
+    }
+
     &__link {
-            color: var(--accent-color);
-        }
-    
+        color: var(--accent-color);
+    }
+
     &__field-btn {
-            display: flex;
-            justify-content: center;
-        }
-    
+        display: flex;
+        justify-content: center;
+    }
+
     &__btn {
-            width: 200px;
-            height: 50px; 
-            
-            @extend %btn;
-        }
-    
+        width: 200px;
+        height: 50px;
+
+        @extend %btn;
+    }
+
     &__btn:focus,
     &__btn:hover {
-            color: var(--primary-white-color);
-            background-color: var(--accent-bg-hover-color);
-        }
+        color: var(--primary-white-color);
+        background-color: var(--accent-bg-hover-color);
+    }
 }
 
 .modal-title {
