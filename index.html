@@ -49,41 +49,59 @@
     
 
     <!-- Mobile menu -->
-    <div class="mobile-menu">
-        <ul class="list mobile-menu__nav">
-            <li class="mobile-menu__item">
-                <a href="" class="mobile-menu__link">Студия </a>
-            </li>
-            <li class="mobile-menu__item">
-                <a href="" class="mobile-menu__link">Портфолио</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a href="" class="mobile-menu__link">Контакты</a>
-            </li>
-        </ul>
-        <ul class="list mobile-menu__contatcts">
-            <li class="mobile-menu__contatcts-item">
-                <a href="tel:+380961111111" class="mobile-menu__contatcts-link">+38 096 111 11 11</a>
-            </li>
-            <li class="mobile-menu__contatcts-item">
-                <a href="mailto:info@devstudio.com" class="mobile-menu__contatcts-link">info@devstudio.com</a>
-            </li>
-        </ul>
-        <ul class="list mobile-menu__socials">
-            <li class="mobile-menu__socials-item">
-                <a href="" class="mobile-menu__socials-link">Instagram </a>
-            </li>
-            <li class="mobile-menu__socials-item">
-                <a href="" class="mobile-menu__socials-link">Twitter</a>
-            </li>
-            <li class="mobile-menu__socials-item">
-                <a href="" class="mobile-menu__socials-link">Facebook</a>
-            </li>
-            <li class="mobile-menu__socials-item">
-                <a href="" class="mobile-menu__socials-link">LinkedIn</a>
-            </li>
-        </ul>
-    </div>
+    <div class="container">
+        <div class="mobile-container">            
+                <nav class="mobile-header__nav">
+                    <a href="./index.html" class="mobile-header__logo">
+                        Web<span class="mobile-header__text">Studio</span>
+                    </a>
+                    <button type="button" class="button mobile-header__button" aria-expanded="false" aria-controls="mobile-menu"
+                        data-menu-button>
+                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                            <use class="mobile-header__icon-menu" href="./images/form-sprite.svg#icon-menu"></use>
+                            <use class="mobile-header__icon-close" href="./images/form-sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+
+                    <div class="mobile-menu" id="mobile-menu" data-menu>
+                        <ul class="mobile-menu__nav">
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Студия </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Портфолио</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-menu__contatcts">
+                            <li class="mobile-menu__item">
+                                <a href="tel:+380961111111" class="mobile-menu__link">+38 096 111 11 11</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="mailto:info@devstudio.com" class="mobile-menu__link">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-menu__socials">
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Instagram </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Twitter</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">Facebook</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="" class="mobile-menu__link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+    </div>   
+    
 
     <main>
         <!--Герой-->
@@ -509,6 +527,7 @@
     </footer>
     
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 
