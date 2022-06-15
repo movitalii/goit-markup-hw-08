@@ -2,71 +2,153 @@
             /* Footer */
 
 .footer {
+    @include mq(not-desktop) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--primary-footer-bg-color);
 
-    &__text {
-            color: var(--primary-white-color)
+    &__connection {
+            @include mq(not-desktop) {
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            @include mq(mobile-only) {
+                margin-bottom: 60px;
+            }
+            
         }
-    
-    &__logo {
-            display: inline-block;
-    
-            margin-right: 0;
-            margin-bottom: 20px;
-            padding: 0;
-    
-            color: var(--accent-color);
-            font-family: Raleway, sans-serif;
-            font-weight: 700;
-            font-size: 26px;
-            line-height: 1.19;
-            text-decoration: none;
+
+    &__group {
+        @include mq(mobile-only) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;           
         }
-    
-    &__address {
-            color: var(--primary-white-color);
-    
-            display: block;
-            margin-bottom: 9px;
-    
-            font-style: normal;
-            font-size: 14px;
-            line-height: 1.71;
+
+        @include mq(not-desktop) {
+            margin-bottom: 60px;
         }
-    
-    &__container {
+
+        @include mq(tablet) {
             display: flex;
         }
-    
-    &__contacts {
-            padding: 0;
+
+        @include mq(tablet-only) {
+            justify-content: space-around;
         }
-    
-    &__link {
-            display: inline-block;
-            color: var(--primary-footer-text-color);
-    
-            font-style: normal;
-            font-size: 14px;
-            line-height: 1.71;
-            text-decoration: none;
-    
-            transition: color var(--timing-function);
-        }
-    
-    &__link:hover,
-    &__link:focus {
-            color: var(--accent-color);
-        }
-    
-    &__container {
+
+        @include mq(desktop) {
             align-items: baseline;
         }
+
+    }
+
+    &__text {
+        color: var(--primary-white-color)
+    }
+        /**/
+    &__logo {
+
+        @include mq(not-desktop) {
+            font-weight: 700;
+                font-size: 24px;
+                line-height: 1.17;
+        }
+    
+
+        display: inline-block;
+
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 0;
+
+        color: var(--accent-color);
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        text-decoration: none;
+    }
+
+                &__address {
+                    color: var(--primary-white-color);
+        
+                    /*display: block;*/
+                    @include mq(not-desktop) {
+                        margin-bottom: 8px;
+                    }
+                    margin-bottom: 9px;
+        
+                    font-style: normal;
+                    font-size: 14px;
+                    line-height: 1.71;
+                }
+       
+    
+        
+    &__container {
+        @include mq(desktop) {
+            display: flex;
+        } 
+        
+        @include mq(not-desktop) {
+            display: flex;
+            flex-direction: column;
+            
+            
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+    }   
+    
+    
+   
+    &__contacts {
+        padding: 0;
+    }
+    
+    
+
+    &__link {
+        display: inline-block;
+        color: var(--primary-footer-text-color);
+
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        text-decoration: none;
+
+        transition: color var(--timing-function);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-color);
+    }
+    
+        &__container {
+            @include mq(desktop) {
+                align-items: baseline;
+        }
+    }
     
     &__item:not(:last-child) {
-            margin-bottom: 9px;
-        }
+        @include mq(not-desktop) {
+                margin-bottom: 8px;
+            }
+        margin-bottom: 9px;
+    }
 }
+
+
+
+
 

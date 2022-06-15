@@ -3,6 +3,8 @@
 
 .page-header {
     border-bottom: 1px solid var(--border-footer);
+    align-items: center;
+    display: flex;
 }
 
 .page-header {
@@ -16,10 +18,12 @@
     display: flex;
 
     &__logo {
+        
         @include mq(tablet-only) {
+            
             margin-right: 88px;
             padding-top: 26px;
-            padding-bottom: 26px;
+                padding-bottom: 26px;
 
             font-weight: 700;
             font-size: 24px;
@@ -39,6 +43,7 @@
     }
             
     &__text {
+
         @include mq(tablet-only) {
             font-weight: 700;
             font-size: 24px;
@@ -109,8 +114,7 @@
         display: block;
         text-align: left;
 
-        padding-top: 21px;
-        padding-bottom: 21px;
+        
     }
     @include mq(desktop) {
         margin-left: auto;
