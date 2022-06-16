@@ -3,7 +3,7 @@
 
 
 .section-rules {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
             padding-top: 60px;
             padding-bottom: 60px;
         }
@@ -16,31 +16,34 @@
 }
 
 .rules {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-            display: inline-block;
+    @media screen and (max-width: 767px) {
+            display: block;
         }
     
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
     }
-    
-}
-
-.rules {  
      
     &__item {
+        @media screen and (max-width: 767px) {
+                max-width: 450px;
+                width: 100%;
+            }
+
         @media screen and (min-width: 768px) {
-            width: 354px;
+            max-width: 354px;
+            width: 100%;
         }
                 
         @media screen and (min-width: 1200px) {
-            width: 270px;
-        }          
+            max-width: 270px;
+            width: 100%;
+        }    
     }
 
    &__item:not(:last-child) {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
            margin-bottom: 30px;
        }
    }
@@ -94,6 +97,9 @@
     
     
     &__title {
+        @media screen and (max-width: 767px) {
+                text-align: center;
+            }
             margin-top: 0;
             margin-bottom: 10px;
             color: var(--title-text-color);
