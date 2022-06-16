@@ -1244,6 +1244,19 @@ textarea {
   background-color: var(--accent-bg-hover-color);
 }
 
+@media screen and (max-width: 767.98px) {
+  .section-hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("header.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("header.jpg");
+  }
+}
+
+@media screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: url("header@2x.jpg");
+  }
+}
+
 /* Rules */
 @media screen and (min-width: 480px) {
   .section-rules {
@@ -1546,7 +1559,7 @@ textarea {
 }
 
 /* Clients */
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199.98px) {
   .section-clients {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1560,7 +1573,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199.98px) {
   .section-clients__title {
     margin-bottom: 30px;
     color: var(--title-text-color);

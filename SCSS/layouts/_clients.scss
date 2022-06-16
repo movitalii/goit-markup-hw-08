@@ -2,18 +2,18 @@
             /* Clients */
 
 .section-clients {
-    @media screen and (min-width: 480px) {
+    @include mq(not-desktop) {
             padding-top: 60px;
             padding-bottom: 60px;
         }
     
-    @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
             padding-top: 94px;
             padding-bottom: 94px;
     }
 
     &__title {
-        @media screen and (min-width: 480px) {
+        @include mq(not-desktop) {
             margin-bottom: 30px;
             color: var(--title-text-color);
     
@@ -23,7 +23,7 @@
             text-align: center;
         }
     
-        @media screen and (min-width: 1200px) {
+                @include mq(desktop) {
             margin-bottom: 50px;
             color: var(--title-text-color);
     

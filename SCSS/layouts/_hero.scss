@@ -14,6 +14,8 @@
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
+
+    
     background-color: var(--primary-footer-bg-color);
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
@@ -63,4 +65,21 @@
             background-color: var(--accent-bg-hover-color);
         }
 }
+
+@include mq(mobile-only) {
+    .section-hero {
+    background-image:
+        linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url('header.jpg');
+    }
+
+    @media (min-resolution: 2dppx) {
+        .section-hero {
+            background-image: url('header@2x.jpg');
+        }
+    }
+}
+
 
