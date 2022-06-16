@@ -3,6 +3,11 @@
 
 .section-hero {
     max-width: 1600px;
+    @include mq(not-desktop) {
+        min-height: 400px;
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
     min-height: 600px;
     margin-right: auto;
     margin-left: auto;
@@ -23,7 +28,7 @@
             margin-right: auto;
             margin-left: auto;
 
-            @include mq(mobile) {
+            @include mq(not-desktop) {
                 width: 100%;
                 max-width: 360px;
             }
