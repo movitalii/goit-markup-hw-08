@@ -39,7 +39,7 @@
     }
 
     &__item:not(:last-child) {
-        @include mq(mobile) {
+        @media screen and (max-width: 767px) {
             margin-bottom: 30px;
         }
     }
