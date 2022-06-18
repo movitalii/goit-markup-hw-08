@@ -1,19 +1,26 @@
 
 /* Mobile menu */
 
-.mobile-container {
+.mobile-container {    
+            
+
     @include mq(tablet) {
-            display: none;
-        }
-        
-    @include mq(mobile-only) {
-        border-bottom: 1px solid var(--border-footer);
+        display: none;
+    }
+
+    @include mq(desktop) {
+        display: none;
     }
 }
+
 .mobile-header {  
     @include mq(tablet) {
             display: none;
         }
+
+    @include mq(desktop) {
+        display: none;
+    }
         
     &__logo {
         color: var(--accent-color);
