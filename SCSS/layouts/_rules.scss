@@ -71,7 +71,7 @@
             display: block;
             content: '';
             height: 120px;
-            background-color: var(--primary-button-bg-color);
+            background-color: #F5F4FA;
             border-radius: 4px;
             margin-bottom: 30px;
             background-position: center;
@@ -80,18 +80,26 @@
     
     &__item--antenna::before {
             background-image: url(../images/icons/antenna.svg);
+            background-color: #F5F4FA;
+                border-radius: 4px;
         }
     
     &__item--clock::before {
             background-image: url(../images/icons/clock.svg);
+            background-color: #F5F4FA;
+                border-radius: 4px;
         }
     
     &__item--diagram::before {
             background-image: url(../images/icons/diagram.svg);
+            background-color: #F5F4FA;
+                border-radius: 4px;
         }
     
     &__item--astronaut::before {
             background-image: url(../images/icons/astronaut.svg);
+            background-color: #F5F4FA;
+                border-radius: 4px;
         }
     
     

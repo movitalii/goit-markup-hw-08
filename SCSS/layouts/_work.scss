@@ -3,23 +3,21 @@
 
     .section-work {
         @media screen and (max-width: 1199px) {
-            display: none;
-            padding-bottom: 94px;
+            display: none;            
+        }   
+        
+        padding-bottom: 94px;
+      
+        &__title {
+        margin-bottom: 50px;
+        color: var(--title-text-color);
+
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
         }
-            
-    
-    
-    
-            &__title {
-                margin-bottom: 50px;
-                color: var(--title-text-color);
-    
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 1.17;
-                text-align: center;
-            }
-        }
+    }
     
         .work {
             display: flex;

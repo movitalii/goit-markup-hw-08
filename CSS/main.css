@@ -7,6 +7,7 @@
   --primary-footer-text-color: rgba(255, 255, 255, 0.6);
   --primary-footer-bg-color: #2F303A;
   --primary-team-bg-color: #F5F4FA;
+  --primary-button-bg-color: #F5F4FA;
   --accent-bg-hover-color: #188CE8;
   --border-color: #EEEEEE;
   --border-footer: #ECECEC;
@@ -803,6 +804,7 @@ textarea {
   padding-right: 22px;
   padding-left: 22px;
   border-radius: 4px;
+  color: var(--title-text-color);
   background-color: var(--primary-button-bg-color);
   font-weight: 500;
   font-size: 16px;
@@ -817,8 +819,6 @@ textarea {
 /* Mobile menu */
 .mobile-header {
   border-bottom: 1px solid var(--border-footer);
-  padding-right: 15px;
-  padding-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1411,7 +1411,7 @@ textarea {
   display: block;
   content: '';
   height: 120px;
-  background-color: var(--primary-button-bg-color);
+  background-color: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
   background-position: center;
@@ -1420,18 +1420,26 @@ textarea {
 
 .rules__item--antenna::before {
   background-image: url(../images/icons/antenna.svg);
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .rules__item--clock::before {
   background-image: url(../images/icons/clock.svg);
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .rules__item--diagram::before {
   background-image: url(../images/icons/diagram.svg);
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .rules__item--astronaut::before {
   background-image: url(../images/icons/astronaut.svg);
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .rules__title {
@@ -1459,10 +1467,13 @@ textarea {
 }
 
 /* Work */
+.section-work {
+  padding-bottom: 94px;
+}
+
 @media screen and (max-width: 1199px) {
   .section-work {
     display: none;
-    padding-bottom: 94px;
   }
 }
 
