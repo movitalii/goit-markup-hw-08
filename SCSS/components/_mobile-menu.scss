@@ -2,12 +2,18 @@
 /* Mobile menu */
 
 .mobile-container {
-    border-bottom: 1px solid var(--border-footer);
+    @include mq(tablet) {
+            display: none;
+        }
+        
+    @include mq(mobile-only) {
+        border-bottom: 1px solid var(--border-footer);
+    }
 }
 .mobile-header {  
     @include mq(tablet) {
             display: none;
-        }   
+        }
         
     &__logo {
         color: var(--accent-color);
