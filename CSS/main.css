@@ -821,6 +821,18 @@ textarea {
   border-bottom: 1px solid var(--border-footer);
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-container {
+    display: none;
+  }
+}
+
 .mobile-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -831,6 +843,12 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .mobile-header {
     display: none;
   }

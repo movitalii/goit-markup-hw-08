@@ -1,26 +1,26 @@
 
 /* Mobile menu */
 
-.mobile-container {    
-            
+        .mobile-container {    
+            @include mq(tablet) {
+                display: none;
+            }
+    
+            @include mq(desktop) {
+                display: none;
+            }
 
-    @include mq(tablet) {
-        display: none;
-    }
-
-    @include mq(desktop) {
-        display: none;
-    }
-}
-
-.mobile-header {  
-    @include mq(tablet) {
-            display: none;
+            border-bottom: 1px solid var(--border-footer);
         }
-
-    @include mq(desktop) {
-        display: none;
-    }
+    
+        .mobile-header {
+            @include mq(tablet) {
+                display: none;
+            }
+    
+            @include mq(desktop) {
+                display: none;
+            }
         
     &__logo {
         color: var(--accent-color);
@@ -203,9 +203,7 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 1.22;
-    }
-    
-    
+    }     
 }
 
 
