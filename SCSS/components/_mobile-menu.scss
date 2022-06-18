@@ -1,15 +1,14 @@
 
 /* Mobile menu */
 
+.mobile-container {
+    border-bottom: 1px solid var(--border-footer);
+}
 .mobile-header {  
     @include mq(tablet) {
             display: none;
-        }
-    
-        border-bottom: 1px solid var(--border-footer);
-
+        }   
         
-    
     &__logo {
         color: var(--accent-color);
             font-family: Raleway, sans-serif;

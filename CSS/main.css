@@ -817,8 +817,11 @@ textarea {
 }
 
 /* Mobile menu */
-.mobile-header {
+.mobile-container {
   border-bottom: 1px solid var(--border-footer);
+}
+
+.mobile-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
